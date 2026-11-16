@@ -1,0 +1,42 @@
+const fs = require("fs");
+const path = require("path");
+
+const filePath = path.join(__dirname, "notes.txt");
+
+// 1. Create
+fs.writeFile(filePath, "Created using async CRUD\n", (err) => {
+  if (err) {
+    console.error("Create error:", err);
+    return;
+  }
+  console.log("File created successfully");
+
+  // 2. Update
+  fs.appendFile(filePath, "Updated using async append\n", (err) => {
+    if (err) {
+      console.error("Update error:", err);
+      return;
+    }
+    console.log("File updated successfully");
+
+    // 3. Read
+    fs.readFile(filePath, "utf8", (err, data) => {
+      if (err) {
+        console.error("Read error:", err);
+        return;
+      }
+      console.log("Read Data:", data);
+
+      // 4. Delete
+      fs.rm(filePath, (err) => {
+        if (err) {
+          console.error("Delete error:", err);
+          return;
+        }
+        console.log("File deleted cvjhs v v jv YS. UYfafhz jh vhzv hsvshfcy
+          if stats  = fs.stat.size 
+          fs.stat("notes.txt", statsInfo
+            const nums {1,2,3,4,5}
+            nums.map(nums,index)=>(
+              comsole.log("number $(index1"):$(num"2)');
+          )
