@@ -1,0 +1,37 @@
+import express from 'express'
+
+// console.log("Hello world")
+// const app = express()
+// const data = {
+//     username : "Harshit",
+//     location : "ghaziabad"
+// }
+// app.get("/",(req,res)=>{ // two arrgument hoga get ke andar app.get(path,callback)
+//     res.send(data)
+// }) 
+
+const bookData = fs.readFileSync("./data/books.json","utf8")
+console.log(bookData);
+app.get("/api/v1/books",(req,res)=>{
+    res.send(data)
+})
+
+
+// app.listen(3000,()=>{
+//     console.log("Server is running...")
+// })
+res.json({
+    status: "success",
+    data: {
+        book: bookData
+    }
+})
+}}
+} catch (error){
+    res.status(404).json({
+        status: "fail",
+        message: "Data not found"
+    })
+    ]
+}}
+
